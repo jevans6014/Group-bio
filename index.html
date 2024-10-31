@@ -56,6 +56,37 @@
         button:hover {
             background: #0056b3;
         }
+        .card img {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            display: none;
+        }
+        .card.julian-evans {
+            background-color: #eaf2f8;
+            border: 1px solid #007BFF;
+        }
+        /* Moodboard */
+        .moodboard {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .moodboard img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .moodboard a {
+            display: inline-block;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 12px;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -83,15 +114,40 @@
         <button onclick="toggleBio('bio3')">Show Bio</button>
         <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
     </div>
+    <div class="card">
+        <h2>Emily Johnson</h2>
+        <p>UI/UX Designer</p>
+        <button onclick="toggleBio('bio3')">Show Bio</button>
+        <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
+    </div>
+    <div class="card julian-evans">
+        <h2>Julian Evans</h2>
+        <p>Scrum Master</p>
+        <button onclick="toggleBio('bio4', 'img4')">Show Bio</button>
+        <p id="bio4" class="bio">Julian is a Scrum Master with the vision of an eagle to see success.</p>
+        <img id="img4" src="/group_bio_template/img/julian-img.png" alt="Picture of Julian Evans">
+        
+        <!-- Moodboard -->
+        <div class="moodboard">
+            <a href="https://github.com/jevans6014/3155_Software_Engineering" target="_blank">GitHub</a>
+            <a href="/group_bio_template/img/meme01.jpg" target="_blank">Meme01</a>
+            <a href="/group_bio_template/img/meme02.webp" target="_blank">Meme02</a>
+        </div>
+    </div>
 </div>
 
 <script>
-    function toggleBio(bioId) {
+    function toggleBio(bioId, imgId) {
         const bio = document.getElementById(bioId);
+        const img = document.getElementById(imgId);
+        
+        // Toggle bio display
         if (bio.style.display === "none" || bio.style.display === "") {
             bio.style.display = "block";
+            img.style.display = "block";
         } else {
             bio.style.display = "none";
+            img.style.display = "none";
         }
     }
 </script>
