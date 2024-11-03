@@ -17,6 +17,23 @@
             padding: 10px 0;
             text-align: center;
         }
+        header nav {
+            margin-top: 10px;
+        }
+
+        header nav button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        header nav button:hover {
+            background: #0056b3;
+        }
         .container {
             width: 80%;
             margin: 20px auto;
@@ -58,6 +75,19 @@
             border: 1px solid orange;
 
         }
+        .card.salmaan{
+            background-color: #f8e3d1;
+            border: 1px solid #e59752;
+            font-family: 'Cambria';
+            a{
+                color:#0056b3;
+                font-weight: bold;
+            }
+            button {
+                color: #f8eeee;
+                background-color: #e59752;
+            }
+        }
         .card2 {
             background: rgb(160, 212, 238);
             border-radius: 8px;
@@ -95,6 +125,61 @@
         button:hover {
             background: #0056b3;
         }
+
+        #vision{
+            background-color: #eaf2f8;
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #53a6ff;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #vision h2{
+            font-size: 35px;
+            text-decoration: underline;
+            
+        }
+
+        #vision p{
+            font-size: 20px;
+            line-height: 1.5;
+            font-family: "Montserrat";
+            font-weight: 550;
+            color: #110b22;
+        }
+
+        .team-rules{
+            background-color: #aecee7;
+            text-align: left;
+            padding: 20px 0;
+            margin: 30px 20px;
+            border: 1px solid #070123;
+            border-radius: 15px;
+
+        }
+
+        .team-rules h2{
+            text-decoration: underline;
+            text-align: center;
+            margin: 25px 0px;
+
+        }
+
+        .team-rules ul{
+            list-style-type: none;
+            font-size: 20px;
+        }
+
+        .team-rules ul li{
+            list-style-type: none;
+            font-size: 20px;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -102,9 +187,14 @@
 <header>
     <img src="img/panda.png" alt="Panda" width="200" height="200">
     <h1>Meet Our Team</h1>
+
+    <nav>
+        <button onclick="showSection('bios')">Team Bios</button>
+        <button onclick="showSection('vision')">Team Vision</button>
+    </nav>
 </header>
 
-<div class="container">
+<div id="bios" class="container">
     
     <div class="card jasmine" style="font-family: 'Georgia', serif;">
         <img src="img/the lorax.jpg" alt="Jasmine Nzuki" width="300" height="300">
@@ -146,7 +236,7 @@
     </div>
     <div class="card amir">
         
-        <img src="img/A.jpg" alt="Amir" width="298" height="324"> 
+        <img src="img/A.jpg" alt="Amir" width="300" height="300"> 
         <h2>Amir Mohamed</h2>
         <p> Developer</p>
         <button onclick="toggleBio('bio3')">Show Bio</button>
@@ -160,11 +250,25 @@
         <a href="https://github.com/Amoham54" target="_blank">GitHub</a>
         </p>
     </div>
-    <div class="card">
-        <h2>Emily Johnson</h2>
-        <p>UI/UX Designer</p>
-        <button onclick="toggleBio('bio3')">Show Bio</button>
-        <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
+    <div class="card salmaan">
+        <img src="img/Salmaans_Avatar.jpg" alt="Salmaans Avatar" width="300" height="300">
+        <h2>Salmaan Hassan</h2>
+        <p>Developer</p>
+        <button onclick="toggleBio('bio5')">Show Bio</button>
+        <p id="bio5" class="bio">Salmaan is a talented developer who is passionate in front-end development. He is always striving to bring quality to every project.</p>
+        <button onclick="toggleBio('Moodboard4')">Show Moodboard</button>
+        <p id="Moodboard4" class="bio">
+            <img src="img/vscode.jpg" alt="VSCode Logo" width="50" height="50">
+            <img src="img/Pycharm.jpg" alt="Pycharm Logo" width="50" height="50">
+            <br>Favorite Tools: VSCode, Pycharm
+            <br>
+            <br> 
+            <a href="img/meme04.jpg" target="_blank">Funny Memes</a>
+            <br><br>
+        <a href="https://github.com/shassan14" target="_blank">GitHub</a>
+            
+            
+        </p>
     </div>
     <div class="card julian-evans">
         <img src="img/julian-img.png" alt="Julian Evans" id="img4" height="300" width="300">
@@ -180,6 +284,24 @@
         </div>
     </div>
 
+    
+</div>
+
+<div id="vision" style="display: none;">
+    <h2>Our Mission Statement</h2>
+    <p>We are a passionate team and innovative computer scientists driven by curiosity. We believe in always 
+        striving to learn more, collaborate together through our problems, and create an inclusive environment where everyone’s ideas are valued and contribute to our shared success.</p>
+        <br><br><br>
+    <div class = "team-rules">
+        <h2>Team Rules</h2>
+        <ul>
+            <li><strong>Respect:</strong> We must respect each team member's voice, background, and ideas.</li>
+            <li><strong>Communication:</strong> We must be transparent in our  communication and ensure we have aligned goals and expectations.</li>
+            <li><strong>Accountability:</strong> We take responsibility for our individual tasks and hold each other accountable to meet deadlines and contribute equally.</li>
+            <li><strong>Quality Feedback:</strong> We provide feedback that respects our group members.</li>
+            <li><strong>Support:</strong> We must support and encourage one another, sharing knowledge and resources to help everyone succeed.</li>
+        </ul>
+    </div>
 </div>
 
 <script>
@@ -191,6 +313,20 @@
             bio.style.display = "none";
         }
     }
+
+    function showSection(sectionId) {
+    const biosSection = document.getElementById("bios");
+    const visionSection = document.getElementById("vision");
+
+    if (sectionId === "bios") {
+        biosSection.style.display = "flex";
+        visionSection.style.display = "none";
+    }
+    else if (sectionId === "vision") {
+        biosSection.style.display = "none";
+        visionSection.style.display = "flex";
+    }
+}
 </script>
 
 </body>
