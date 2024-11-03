@@ -49,6 +49,10 @@
                 background-color: #000000;
             }
         }
+        .card.jasmine {
+            background-color: #eaf2f8;
+            border: 1px solid grey;
+        }
 
         .card2 {
             background: rgb(160, 212, 238);
@@ -97,12 +101,26 @@
 </header>
 
 <div class="container">
-    <div class="card">
-        <h2>John Doe</h2>
-        <p>Frontend Developer</p>
+    
+    <div class="card jasmine" style="font-family: 'Georgia', serif;">
+        <img src="img/the lorax.jpg" alt="Jasmine Nzuki" width="300" height="300">
+        <h2>Jasmine Nzuki</h2>
+        <p>Product Owner</p>
         <button onclick="toggleBio('bio1')">Show Bio</button>
-        <p id="bio1" class="bio">John is a skilled frontend developer with 5 years of experience in creating responsive web applications.</p>
+        <p id="bio1" class="bio">Jasmine is a skilled product owner that cares about the tasks at hand as well as the team members.</p>
+        <button onclick="toggleBio('Moodboard1')">Show Moodboard</button>
+        <p id="Moodboard1" class="bio">
+            <img src="img/Jira.jpg" alt="Moodboard" width="50" height="50">
+            <br>Main Tool: Jira
+            <br>
+            <br><br>
+        <a href="https://github.com/jnzuki" target="_blank">GitHub Profile</a>
+            
+            
+        </p>
     </div>
+    
+    
     <div class="card jgeroux">
         <img src="img/avatar.jpg" alt="Avatar" width="300" height="300">
         <h2>Jacob Geroux</h2>
